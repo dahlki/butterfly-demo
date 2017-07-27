@@ -16,7 +16,7 @@
  
  $ npm run start-server
  
-   open localhost:3000
+   open localhost:3000 and pick a mood
    or to directly pick a mood from 1-5
    open localhost:3000/v/your-mood-level-here
  ```
