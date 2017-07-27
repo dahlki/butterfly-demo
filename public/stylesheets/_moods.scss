@@ -1,0 +1,90 @@
+@import "utils";
+
+.mood-container {
+  box-sizing: content-box;
+  min-height: 13em;
+  margin-bottom: 3.4em;
+  max-width: 52em;
+  background: $dark-color-gradient;
+  padding: 3em 3em;
+  border-radius: .3em;
+  display: block;
+  // float: left;
+  -webkit-box-direction: normal;
+  // display: -webkit-box;
+  display: -ms-flexbox;
+
+
+  .mood-select-title {
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 1.6em;
+    margin-bottom: 1.2em;
+  }
+
+  .moods-all {
+    display: flex;
+    justify-content: space-around;
+    touch-action: manipulation;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: distribute;
+
+    // margin-top: 1em;
+    // margin-bottom: 3em;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-box-orient: horizontal;
+    // -webkit-box-direction: normal;
+    // -ms-flex-direction: row;
+    // flex-direction: row;
+    // -webkit-box-align: center;
+    // -ms-flex-align: center;
+
+
+  }
+  .mood-button-active {
+    background: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: .4em;
+
+    .mood {
+      height: 6.4em;
+      width: 6.4em;
+    }
+  }
+  .mood-button {
+    background: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: .4em;
+    transition: background-color .5s;
+
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+
+    .mood {
+      height: 6.4em;
+      width: 6.4em;
+    }
+  }
+  .mood-button:hover {
+    background: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: .4em;
+  }
+
+}
+

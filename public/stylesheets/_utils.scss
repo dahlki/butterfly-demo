@@ -1,0 +1,28 @@
+$background-color: #146A74;
+$logo-color: #2ce6ce;
+$light-color: #1B828E;
+$dark-color: #0d4d54;
+$light-color-gradient: #12737e;
+// $dark-color-gradient: #073e44;
+$dark-color-gradient: #03292e;
+$pink-color: rgb(241, 184, 200);
+$red-rating: #E95666;
+$red-orange-rating:#F98371;
+$orange-rating: #F7A062;
+$yellow-rating: #FFDC00;
+
+@mixin gradient {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+@mixin slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+$animation-sidebar: SidebarGradient 15s ease infinite;
+$animation-sidebar-slide: 1.5s ease-out 0s 1 SlideInFromLeft;

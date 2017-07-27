@@ -1,0 +1,91 @@
+//color variables 146A74 188591
+@import "utils";
+
+.sidebar {
+  box-sizing: border-box;
+  display: flex;
+  width: 3.6em;
+  flex: 0 0 3em;
+  flex-direction: column;
+  align-items: center;
+  padding: .6em;
+  height: 100vh;
+  overflow: hidden;
+  float: left;
+  min-height: 100%;
+  position: fixed;
+
+  ///////////// sidebar gradient animation /////////////
+  background: linear-gradient(180deg, $dark-color-gradient, $light-color-gradient);
+  background-size: 400% 400%;
+
+
+  -webkit-animation: $animation-sidebar;
+  -moz-animation: $animation-sidebar;
+  animation: $animation-sidebar, $animation-sidebar-slide;
+  animation-delay: 2s, 0s;
+  // -o-animation: $animation-sidebar;
+
+  @-webkit-keyframes SidebarGradient {
+    @include gradient
+  }
+  @-moz-keyframes SidebarGradient {
+    @include gradient
+  }
+  @keyframes SidebarGradient {
+    @include gradient
+  }
+  // @-o-keyframes SidebarGradient {
+  //   @include gradient
+  // }
+
+  @keyframes SlideInFromLeft {
+    @include slide
+  }
+  .sidebar-link {
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: .3em;
+    background: $logo-color;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+  }
+
+  svg.butterfly-icon {
+    margin: auto;
+    width: 1.6em;
+    height: 1.6em;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .sidebar-link-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    margin: auto 0 auto 0;
+    position: fixed;
+    bottom: .8em;
+  }
+  svg.info-icon {
+    cursor: help;
+    overflow: hidden;
+    bottom: 0;
+    display: inline-block;
+    margin: auto;
+    &>path {
+      fill: rgb(173, 233, 215);
+    }
+  }
+
+}
+
+.sidebar-link:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+

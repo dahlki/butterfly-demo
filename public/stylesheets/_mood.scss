@@ -1,0 +1,66 @@
+@import "utils";
+.mood {
+  // margin:auto;
+  // display: inline-block;
+    // margin-bottom: 3em;
+}
+.select-mood {
+  // display: block;
+  margin-top: 1em;
+  margin-bottom: 7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+
+
+  .select-mood-smile {
+    display: inline;
+    svg {
+      box-sizing: border-box;
+      height: 13rem;
+      width: 13rem;
+      border: .5rem solid #fff;
+      border-radius: 50%;
+      background: #fff;
+      display: block;
+      align-items: center;
+      overflow: hidden;
+
+    }
+  }
+  .select-mood-title {
+    margin-left: 2.2rem;
+    overflow-wrap: normal;
+    max-width: 36rem;
+  }
+
+  .select-mood-title-message {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.4em;
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+  }
+
+  .select-mood-title-note {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #94BABF;
+    font-family: sans-serif;
+    strong {
+      color: $logo-color
+    }
+  }
+}
+

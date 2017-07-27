@@ -1,0 +1,129 @@
+@import "utils";
+
+html {
+  font-size: 62.5%;
+  font-family: Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+  font-weight: 400;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $dark-color;
+  height: 100vh;
+  touch-action: manipulation;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  min-height: 100%;
+  overflow: scroll;
+
+  span>.email {
+    margin-top: 1.1em;
+    line-height: 3em;
+    display: block;
+    color: $pink-color;
+    box-sizing: border-box;
+  }
+  textarea {
+    resize: none;
+  }
+}
+
+a#repo {
+  display: inline;
+  margin: 0 auto;
+  position: fixed;
+  top: 1.5em;
+  right: 3em;
+  color: $light-color;
+  font-size: 1.8em;
+  text-decoration: none;
+  &:hover {
+    color: $pink-color;
+  }
+}
+@media all and (max-width: 830px) {
+  a#repo { display: none; }
+}
+@media all and ( max-width: 900px) {
+  a#repo { font-size: 1.4em; }
+}
+
+
+.main {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  padding: 4rem 2rem 1rem 7.8rem;
+}
+.thank-you-page {
+  color: white;
+  font-weight: bold;
+  font-size: 4em;
+  margin: 1.5rem 0 4em;
+  border-radius: .3rem;
+  background: #fff;
+  padding-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  .thank-you {
+    color: $logo-color;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    padding: 3rem 3rem 0;
+    display: flex;
+  }
+  .thank-you-message {
+    color: $background-color;
+    font-size: 1.4rem;
+    line-height: 2.5em;
+    padding-top: 1em;
+    a {
+      color: $background-color;
+      font-size: 1.4rem;
+      line-height: 2.5em;
+      padding-top: 1em;
+    }
+  }
+}
+.footer {
+  margin-bottom: 2em;
+  margin-top: 2em;
+  a {
+    text-decoration: none;
+    color: $logo-color;
+    font-size: 1.4em;
+    line-height: 2em;
+  }
+}
+.footer-butterfly {
+  color: white;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+a .github-icon {
+  width: 2em;
+  max-height: 2em;
+  display: block;
+  pointer-events: visible;
+  z-index: 1000;
+}
+a .github-icon:hover {
+  &>g>g>path {
+    fill: $pink-color;
+    pointer-events: visible;
+  }
+  &>g>g>ellipse {
+    fill: white;
+  }
+
+}
+
+
+

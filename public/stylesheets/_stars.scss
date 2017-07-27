@@ -1,0 +1,261 @@
+@import "utils";
+.star-text {
+  margin-top: 1em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #c3c3c3;
+
+  .disagree {
+    float: left;
+  }
+  .agree {
+    float: right;
+  }
+}
+.rating-group {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  margin-top: 3rem;
+  padding: 0 3.5rem;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+}
+.stars-meter {
+  box-sizing: border-box;
+  height: 4rem;
+  border-radius: 2.1rem;
+  border: .3rem solid #ededed;
+  background: #f7f7f7;
+  margin: auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  cursor: pointer;
+  direction: rtl;
+  padding: .2rem;
+  justify-content: space-between;
+  &>a{
+    z-index: 1000;
+    height: 3.4em;
+    flex-grow: 1;
+    &:first-child {
+      border-radius: 0 1.6rem 1.6rem 0;
+    }
+    &:last-child {
+      border-radius: 1.6rem 0 0 1.6rem;
+    }
+  }
+}
+.stars-meter>a>svg, path {
+  pointer-events:none;
+}
+
+a svg.star-icon {
+  box-sizing: content-box;
+  padding: .68em;
+  margin: 0 auto;
+  pointer-events: none;
+  &>path {
+    fill: #c3c3c3;
+    box-sizing: border-box;
+    // pointer-events: none;
+  }
+  &:hover {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    &>path {
+      fill:white;
+    }
+    &~path {
+      fill: red;
+    }
+  }
+}
+
+.star:hover {
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+
+/////////////////
+.selected[data-star='1'] {
+  background: -webkit-linear-gradient(left,$red-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$red-rating 50%,transparent 0);
+  &~a {
+    background: $red-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+.selected[data-star='2'] {
+  background: -webkit-linear-gradient(left,$red-orange-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$red-orange-rating 50%,transparent 0);
+  &~a {
+    background: $red-orange-rating;
+  }
+  ~svg.star-icon>path {
+    fill:white;
+  }
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+.selected[data-star='3'] {
+  background: -webkit-linear-gradient(left,$orange-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$orange-rating 50%,transparent 0);
+  &~a {
+    background: $orange-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+.selected[data-star='4'] {
+  background: -webkit-linear-gradient(left,$yellow-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$yellow-rating 50%,transparent 0);
+  &~a {
+    background: $yellow-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+// .stars-meter>a:first-child.selected
+.selected[data-star='5'] {
+  background: -webkit-linear-gradient(left,$yellow-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$yellow-rating 50%,transparent 0);
+  background: $yellow-rating;
+  &~a {
+    background: $yellow-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+  svg.star-icon {
+    border-radius: 50%;
+    background-color: $background-color;
+    height: 4.2rem;
+    width: 4.2rem;
+    margin: -.4rem;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
+
+
+//////////////////////////////////
+[data-star='1']:hover {
+  background: -webkit-linear-gradient(left,$red-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$red-rating 50%,transparent 0);
+  &~a, {
+      background: $red-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+}
+[data-star='2']:hover {
+  background: -webkit-linear-gradient(left,$red-orange-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$red-orange-rating 50%,transparent 0);
+  &~a, {
+    background: $red-orange-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+}
+[data-star='3']:hover {
+  background: -webkit-linear-gradient(left,$orange-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$orange-rating 50%,transparent 0);
+  &~a, {
+    background: $orange-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+}
+[data-star='4']:hover {
+  background: -webkit-linear-gradient(left,$yellow-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$yellow-rating 50%,transparent 0);
+  &~a, {
+    background: $yellow-rating;
+  }
+  svg.star-icon>path {
+    fill:white;
+  }
+}
+// .stars-meter>a:nth-child(1n):hover {
+//   background: -webkit-linear-gradient(left,$yellow-rating 0%, transparent 0);
+//   background: linear-gradient(90deg,$yellow-rating 50%,transparent 0);
+//   background: $yellow-rating;
+//   &~a, {
+//     background: $yellow-rating;
+//   }
+//   svg.star-icon>path:hover {
+//     fill:white;
+//   }
+// }
+[data-star="5"]:hover {
+  background: -webkit-linear-gradient(left,$yellow-rating 0%, transparent 0);
+  background: linear-gradient(90deg,$yellow-rating 50%,transparent 0);
+  background: $yellow-rating;
+  &~a, {
+    background: $yellow-rating;
+  }
+  svg.star-icon>path:hover {
+    fill:white;
+  }
+
+}
+
+
